@@ -17,7 +17,7 @@ section.data
         arr dq 0000003h,00000002h
         n eq 2
 
-tmp db 0,0;
+tmp db 0,0
 
 welcome_message:
         mov rax, 0x1
