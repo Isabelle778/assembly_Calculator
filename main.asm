@@ -90,3 +90,7 @@ je Divide
 
 cmp byte[rsi], '5'
 je Exit
+
+leave
+ret
+
