@@ -19,26 +19,27 @@ section.data
 
 tmp db 0,0
 
+section.text
+
+_start
+
+
 welcome_message:
         mov rax, 0x1
         mov rdi, 1
         mov rsi welcome
-        mov rdx, welcome_lenght
+        mov rdx, welcome_length
         syscall
         ret
 
 
 welcome db 0dh, 0ah, 0dh, 0ah,"welcome to my calculator :)", 0dh, 0ah
-welcome_lenght equ $-welcome
+welcome_length equ $-welcome
 choice db, "please choose a number:", 0dh, 0ah
-choice_lenght equ $-choice
-operator db "1-Add", 0dh, 0ah,"2-Substract", 0dh, 0ah,  "3-Multiply", 0dh, 0ah,  "4-Divide", 0dh, 0ah,  "5-Exit", 10
-operator_lenght equ $-operator
+choice_length equ $-choice
+operator db "1-Add", 0dh, 0ah,"2-Subtraction", 0dh, 0ah,  "3-Multiply", 0dh, 0ah,  "4-Divide", 0dh, 0ah,  "5-Exit", 10
+operator_length equ $-operator
 
-
-section.text
-
-_start
 
 LOOP: 
 
@@ -54,7 +55,7 @@ get_choice:
 mov rax, 0x1
 mov rdi, 1
 mov rsi choice
-mov rdx, choice_lenght
+mov rdx, choice_length
 syscall
 ret
 
@@ -63,7 +64,7 @@ operators
 mov rax, 0x1
 mov rdi, 1
 mov rsi operator
-mov rdx, operator_lenght
+mov rdx, operator_length
 syscall
 ret
 
