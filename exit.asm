@@ -6,3 +6,5 @@ Exit:
     syscall        
     sysexit        
     
+leave    
+ret
