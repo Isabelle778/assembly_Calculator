@@ -19,11 +19,6 @@ section.data
 
 tmp db 0,0
 
-section.text
-
-_start
-
-
 welcome_message:
         mov rax, 0x1
         mov rdi, 1
@@ -39,6 +34,11 @@ choice db, "please choose a number:", 0dh, 0ah
 choice_length equ $-choice
 operator db "1-Add", 0dh, 0ah,"2-Subtraction", 0dh, 0ah,  "3-Multiply", 0dh, 0ah,  "4-Divide", 0dh, 0ah,  "5-Exit", 10
 operator_length equ $-operator
+
+
+section.text
+
+_start
 
 
 LOOP: 
