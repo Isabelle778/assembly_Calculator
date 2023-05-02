@@ -16,6 +16,8 @@ global_start
 section.data
         arr dq 0000003h,00000002h
         n eq 2
+       
+        extern printFunction
 
 tmp db 0,0
 
